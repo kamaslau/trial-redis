@@ -1,0 +1,18 @@
+{
+  "name": "trial-redis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "NODE_ENV=development node .",
+    "start": "NODE_ENV=production node ."
+  },
+  "keywords": [],
+  "author": "Kamas Lau<kamaslau@dingtalk.com>",
+  "license": "MIT",
+  "dependencies": {
+    "redis": "^4"
+  }
+}
