@@ -6,7 +6,17 @@ The [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDeskt
 
 # Startup
 
-```
-# Launch with docker
+Launch Redis with docker on port 6379.
+
+```shell
 docker run --name redis -d -p 6379:6379 --restart=always redis
+```
+
+Start Node.js application on port 3000.
+
+[http://localhost:3000](http://localhost:3000)
+
+```shell
+pnpm i
+pnpm start:dev # or just pnpm start, with PM2 or Docker watching its back
 ```
