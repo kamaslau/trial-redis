@@ -1,22 +1,29 @@
-import Koa from 'koa'
-import { createClient } from 'redis'
-const client = createClient()
-client.on('error', (err) => console.log('Redis Client Error', err))
+import Koa from "koa";
+import { createClient } from "redis";
 
-const app = new Koa()
+const initDB = async () => {
+  const client = createClient() ?? null;
 
-app.use(async ctx => {
-  await client.connect()
+  client.on("error", (error) => console.error(error));
 
-  const keyName = 'sample-key:lastRequestedAt'
-  const keyValue = Date.now()
+  await client.connect();
 
-  await client.set(keyName, keyValue)
-  const value = await client.get(keyName)
+  return client;
+};
 
-  client.disconnect()
+const app = new Koa();
 
-  ctx.body = { key: keyName, value }
-})
+app.context.db = await initDB();
 
-app.listen(3000)
+app.use(async (ctx) => {
+  const keyName = "sample-key:lastRequestedAt";
+  const keyValue = Date.now();
+
+  await ctx.db.set(keyName, keyValue);
+
+  const value = await ctx.db.get(keyName);
+
+  ctx.body = { key: keyName, value };
+});
+
+app.listen(3000);
