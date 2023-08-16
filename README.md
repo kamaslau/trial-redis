@@ -1,8 +1,8 @@
 # trial-redis
 
-Trial or micro-service unit of [Redis](https://redis.io/docs/), based on the official image from docker hub(https://hub.docker.com/_/redis).
+Trial or micro-service unit of [Redis](https://redis.io/docs/) with [official Node.js client library](https://redis.io/docs/clients/nodejs/), based on the official image from docker hub(https://hub.docker.com/_/redis).
 
-The [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager) is recommended as the desktop client.
+The [Official RedisInsight](https://redis.com/redis-enterprise/redis-insight/) or [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager) is recommended as the desktop client.
 
 # Startup
 
