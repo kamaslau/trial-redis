@@ -1,14 +1,19 @@
 import Koa from "koa";
-import { createClient } from "redis";
+import { createClient } from "redis"; // https://www.npmjs.com/package/redis
 
-const initDB = async () => {
-  const client = createClient() ?? null;
+const defaultUrl = "redis://localhost:6379";
 
-  client.on("error", (error) => console.error(error));
+const initDB = async (url = process.env.REDIS_URL ?? defaultUrl) => {
+  const client = createClient({ url });
 
-  await client.connect();
+  try {
+    // Connect the client to the server
+    await client.connect();
 
-  return client;
+    return client;
+  } catch (error) {
+    console.log("error: ", error);
+  }
 };
 
 const app = new Koa();
