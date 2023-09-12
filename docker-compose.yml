@@ -1,0 +1,20 @@
+version: "3.9"
+
+volumes:
+  redis_data:
+
+networks:
+  backend:
+
+services:
+  redis:
+    image: redis/redis-stack-server:latest
+    restart: always
+    networks:
+      - backend
+    ports:
+      - 6379:6379
+    volumes:
+      - type: volume
+        source: redis_data
+        target: /data
