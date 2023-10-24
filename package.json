@@ -1,7 +1,12 @@
 {
   "name": "trial-redis",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "author": "Lau, Kamas <kamaslau@dingtalk.com> (https://www.kamaslau.com/)",
+  "license": "MIT",
+  "description": "Trial or micro-service unit of Redis, with official Node.js driver.",
+  "keywords": [
+    "Redis"
+  ],
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -9,11 +14,16 @@
     "start:dev": "NODE_ENV=development node .",
     "start": "NODE_ENV=production node ."
   },
-  "keywords": [],
-  "author": "Kamas Lau<kamaslau@dingtalk.com>",
-  "license": "MIT",
   "dependencies": {
     "koa": "^2.14.2",
-    "redis": "^4.6.8"
-  }
+    "redis": "^4.6.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamaslau/trial-redis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kamaslau/trial-redis/issues"
+  },
+  "homepage": "https://github.com/kamaslau/trial-redis#readme"
 }
