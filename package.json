@@ -15,8 +15,8 @@
     "start": "NODE_ENV=production node ."
   },
   "dependencies": {
-    "koa": "^2.14.2",
-    "redis": "^4.6.10"
+    "koa": "^2.15.0",
+    "redis": "^4.6.12"
   },
   "repository": {
     "type": "git",
