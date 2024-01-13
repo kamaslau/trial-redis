@@ -1,6 +1,6 @@
 # trial-redis
 
-Trial or micro-service unit of [Redis](https://redis.io/docs/) with [official Node.js client library](https://redis.io/docs/clients/nodejs/), based on the official image from docker hub(https://hub.docker.com/_/redis).
+Trial or micro-service unit of [Redis](https://redis.io/docs/) with [official Node.js client driver](https://redis.io/docs/clients/nodejs/).
 
 The [Official RedisInsight](https://redis.com/redis-enterprise/redis-insight/) or [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager) is recommended as the desktop client.
 
@@ -12,24 +12,22 @@ The [Official RedisInsight](https://redis.com/redis-enterprise/redis-insight/) o
 
 None, as default.
 
-## Startup
+## Usage
 
-### Start a service group
-
-Manage service stack with [Docker Compose](https://docs.docker.com/compose/).
+### Start with [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
+# Initiate .env file
+cp .env_template .env
 # Start services
 docker compose up -d
-
-# Stop services and prune Docker volumes
-docker compose down -v
 ```
 
-To update containers with latest images:
+Update existing composed containers with latest images:
 
 ```bash
-docker compose pull
+docker compose pull && \
+docker compose down && \
 docker compose up -d
 ```
 
@@ -60,6 +58,10 @@ pnpm start:dev # or just pnpm start, with PM2 or Docker watching its back
 # Enter container and initiate shell
 docker exec -it redis sh
 ```
+
+## Relevent Docker images
+
+- [Redis](https://hub.docker.com/_/redis)
 
 ## References
 

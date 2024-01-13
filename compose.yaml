@@ -13,8 +13,9 @@ services:
     restart: always
     networks:
       - backend
+    env_file: .env
     ports:
-      - 6379:6379
+      - ${PORT-6379}:6379
     volumes:
       - type: volume
         source: redis_data
