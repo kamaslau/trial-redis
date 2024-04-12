@@ -15,7 +15,7 @@
     "start": "NODE_ENV=production node ."
   },
   "dependencies": {
-    "koa": "^2.15.2",
+    "koa": "^2.15.3",
     "redis": "^4.6.13"
   },
   "repository": {
