@@ -26,5 +26,5 @@
     "url": "https://github.com/kamaslau/trial-redis/issues"
   },
   "homepage": "https://github.com/kamaslau/trial-redis#readme",
-  "packageManager": "pnpm@9.12.1"
+  "packageManager": "pnpm@9.14.2"
 }
