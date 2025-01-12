@@ -18,7 +18,7 @@ None, as default.
 
 ```bash
 # Initiate .env file
-cp .env_template .env
+cp .env.sample .env
 # Start services
 docker compose up -d
 ```
