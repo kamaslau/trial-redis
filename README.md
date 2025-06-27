@@ -35,7 +35,7 @@ docker compose up -d
 
 #### Redis
 
-Launch Redis with docker on port 6379.
+Launch Redis with docker on port _6379_.
 
 ```shell
 docker run --name redis -d -p 6379:6379 --restart=always redis/redis-stack-server:latest
@@ -43,7 +43,7 @@ docker run --name redis -d -p 6379:6379 --restart=always redis/redis-stack-serve
 
 ## Testing
 
-Start Node.js application on port 3000.
+Start Node.js application on port _3000_.
 
 [http://localhost:3000](http://localhost:3000)
 
