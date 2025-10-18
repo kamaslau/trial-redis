@@ -1,5 +1,8 @@
 # trial-redis
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Repository size](https://img.shields.io/github/repo-size/kamaslau/trial-redis?color=56BEB8)
+
 Trial or micro-service unit of [Redis](https://redis.io/docs/) with [official Node.js client driver](https://redis.io/docs/clients/nodejs/).
 
 The [Official RedisInsight](https://redis.com/redis-enterprise/redis-insight/) or [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager) is recommended as the desktop client.
