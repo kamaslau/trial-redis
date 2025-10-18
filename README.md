@@ -17,7 +17,7 @@ None, as default.
 
 ## Usage
 
-### Start with [Docker Compose](https://docs.docker.com/compose/)
+### Start up with [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
 # Initiate .env file
@@ -62,10 +62,7 @@ pnpm start:dev # or just pnpm start, with PM2 or Docker watching its back
 docker exec -it redis sh
 ```
 
-## Relevent Docker images
-
-- [Redis](https://hub.docker.com/_/redis)
-
 ## References
 
+- [Redis on Docker Hub](https://hub.docker.com/_/redis)
 - https://developer.redis.com/create/docker/redis-on-docker/
